@@ -107,7 +107,7 @@ function toResult() {
               {jsonData[subNo].questions[qNo].question}
             </h1>
             
-              {qNo === 9 ? <p className="p-3 border hover:bg-pink-300 text-purple-900" onClick={increaseSubNo}> Click Next!   </p>: ""}
+              {qNo === 9 ? <p className="p-3 border bg-black hover:bg-pink-300 text-purple-900" onClick={increaseSubNo}> Click Next!   </p>: ""}
           
           </div>{" "}
         </div>
