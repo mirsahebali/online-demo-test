@@ -13,9 +13,7 @@ export default function QuizTimer(props) {
     }
     return () => clearInterval(timerId);
   }, [timeLeft]);
-function loging() {
-  console.log("Test ended")
-}
+
  
   let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;

@@ -95,7 +95,6 @@ export default function Screen({ score, state }) {
 
 
 
-  console.log(jsonData[subNo]);
 
   return (
     <>

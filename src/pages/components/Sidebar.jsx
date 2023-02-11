@@ -1,6 +1,7 @@
 import profile from "./profiles.json";
 import Image from "next/image";
 export default function Sidebar({element, Array, palateQ}) {
+  Array = []
   return (
 
     <div className="flex flex-col items-center justify-center " >
