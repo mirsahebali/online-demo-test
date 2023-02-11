@@ -1,179 +1,106 @@
 {
   "questions": [
-    {
-      "question": "What is the value of x in the equation 2x + 4 = 10?",
-      "options": ["2", "3", "4", "5"],
-      "answer": "3"
-    },
-    {
-      "question": "What is the slope of the line y = 2x + 1?",
-      "options": ["1", "2", "3", "4"],
-      "answer": "2"
-    },
-    {
-      "question": "What is the y-intercept of the line y = 2x + 1?",
-      "options": ["1", "2", "3", "4"],
-      "answer": "1"
-    },
-    {
-      "question": "What is the equation of the line that passes through the points (1,2) and (2,4)?",
-      "options": ["y = 2x", "y = x + 2", "y = 2x + 1", "y = 2x + 2"],
-      "answer": "y = 2x"
-    },
-    {
-      "question": "What is the midpoint formula?",
-      "options": [
-        "(x1 + x2)/2, (y1 + y2)/2",
-        "(x1 + x2), (y1 + y2)",
-        "(x1 + x2) * (y1 + y2)/2",
-        "(x1 + x2) / (y1 + y2)/2"
-      ],
-      "answer": "(x1 + x2)/2, (y1 + y2)/2"
-    },
-    {
-      "question": "What is the Pythagorean theorem?",
-      "options": [
-        "a^2 + b^2 = c^2",
-        "a^2 - b^2 = c^2",
-        "a^2 * b^2 = c^2",
-        "a^2 / b^2 = c^2"
-      ],
-      "answer": "a^2 + b^2 = c^2"
-    },
-    {
-      "question": "What is the formula for calculating the distance between two points?",
-      "options": [
-        "d = |x2 - x1| + |y2 - y1|",
-        "d = (x2 - x1)^2 + (y2 - y1)^2",
-        "d = sqrt((x2 - x1)^2 + (y2 - y1)^2)",
-        "d = sqrt(|x2 - x1| + |y2 - y1|)"
-      ],
-      "answer": "d = sqrt((x2 - x1)^2 + (y2 - y1)^2)"
-    },
-    {
-      "question": "What is the formula for calculating the area of a triangle?",
-      "options": [
-        "A = (b * h)/2",
-        "A = bh",
-        "A = b^2 + h^2",
-        "A = sqrt(b^2 + h^2)"
-      ],
-      "answer": "A = (b * h)/2"
-    },
-    {
-      "question": "What is the formula for calculating the volume of a sphere?",
-      "options": [
-        "V = 4/3 * pi * r^3",
-        "V = pi * r^2",
-        "V = 4 * pi * r",
-        "V = 2 * pi * r"
-      ],
-      "answer": "V = 4/3 * pi * r^3"
-    },
-    {
-      "question": "What is the formula for calculating the perimeter of a rectangle?",
-      "options": [
-        "P = 2l + 2w",
-        "P = l + w",
-        "P = l * w",
-        "P = sqrt(l^2 + w^2)"
-      ],
-      "answer": "P = 2l + 2w"
-    },
-    {
-      "question": "What is the formula for calculating the volume of a cylinder?",
-      "options": [
-        "V = pi * r^2 * h",
-        "V = 2 * pi * r * h",
-        "V = pi * r * h",
-        "V = pi * r^2"
-      ],
-      "answer": "V = pi * r^2 * h"
-    },
-    {
-      "question": "What is the formula for calculating the sum of an arithmetic series?",
-      "options": [
-        "S = n/2 * (a_1 + a_n)",
-        "S = n * (a_1 + a_n)/2",
-        "S = n * (a_1 * a_n)",
-        "S = (a_1 + a_n)^n/2"
-      ],
-      "answer": "S = n/2 * (a_1 + a_n)"
-    },
-    {
-      "question": "What is the formula for calculating the factorial of a number?",
-      "options": ["n!", "n^n", "n + n!", "n - n!"],
-      "answer": "n!"
-    },
-    {
-      "question": "What is the formula for calculating combinations?",
-      "options": [
-        "C(n, k) = n! / (k! * (n - k)!)",
-        "C(n, k) = n^k",
-        "C(n, k) = n! + k!",
-        "C(n, k) = n! - k!"
-      ],
-      "answer": "C(n, k) = n! / (k! * (n - k)!)"
-    },
-    {
-      "question": "What is the formula for calculating the mean of a set of numbers?",
-      "options": [
-        "mean = sum of numbers / total number of numbers",
-        "mean = sum of numbers * total number of numbers",
-        "mean = sum of numbers + total number of numbers",
-        "mean = sum of numbers - total number of numbers"
-      ],
-      "answer": "mean = sum of numbers / total number of numbers"
-    },
-    {
-      "question": "What is the formula for calculating the mode of a set of numbers?",
-      "options": [
-        "mode = number that appears most frequently in the set",
-        "mode = sum of numbers / total number of numbers",
-        "mode = sum of numbers * total number of numbers",
-        "mode = sum of numbers + total number of numbers"
-      ],
-      "answer": "mode = number that appears most frequently in the set"
-    },
-    {
-      "question": "What is the formula for calculating the median of a set of numbers?",
-      "options": [
-        "median = middle number in the set when the set is arranged in ascending or descending order",
-        "median = sum of numbers / total number of numbers",
-        "median = sum of numbers * total number of numbers",
-        "median = sum of numbers + total number of numbers"
-      ],
-      "answer": "median = middle number in the set when the set is arranged in ascending or descending order"
-    },
-    {
-      "question": "What is the formula for calculating the standard deviation of a set of numbers?",
-      "options": [
-        "standard deviation = sqrt(sum of (each number - mean)^2 / total number of numbers)",
-        "standard deviation = sum of (each number - mean) / total number of numbers",
-        "standard deviation = sum of (each number - mean)^2 / total number of numbers",
-        "standard deviation = sqrt(sum of each number / total number of numbers)"
-      ],
-      "answer": "standard deviation = sqrt(sum of (each number - mean)^2 / total number of numbers)"
-    },
-    {
-      "question": "What is the formula for calculating the slope of a line?",
-      "options": [
-        "slope = (y2 - y1) / (x2 - x1)",
-        "slope = (y1 - y2) / (x2 - x1)",
-        "slope = (y2 + y1) / (x2 - x1)",
-        "slope = (y1 + y2) / (x2 + x1)"
-      ],
-      "answer": "slope = (y2 - y1) / (x2 - x1)"
-    },
-    {
-      "question": "What is the formula for calculating the distance between two points?",
-      "options": [
-        "distance = sqrt((x2 - x1)^2 + (y2 - y1)^2)",
-        "distance = (x2 - x1) + (y2 - y1)",
-        "distance = (x2 - x1) * (y2 - y1)",
-        "distance = sqrt((x2 + x1)^2 + (y2 + y1)^2)"
-      ],
-      "answer": "distance = sqrt((x2 - x1)^2 + (y2 - y1)^2)"
-    }
-  ]
-}
+    
+      {
+        "id": 1,
+        "question": "What is the value of x in the equation 2x + 4 = 10?",
+        "options": [
+          { "id": 1, "option": "2", "isCorrect": true },
+          { "id": 2, "option": "3", "isCorrect": false },
+          { "id": 3, "option": "4", "isCorrect": false },
+          { "id": 4, "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What is the slope of the line y = 2x + 1?",
+        "options": [
+          { "id": 1, "option": "2", "isCorrect": true },
+          { "id": 2, "option": "1", "isCorrect": false },
+          { "id": 3, "option": "3", "isCorrect": false },
+          { "id": 4, "option": "0", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "What is the equation of the line that passes through the points (1, 2) and (2, 4)?",
+        "options": [
+          { "id": 1, "option": "y = 2x", "isCorrect": true },
+          { "id": 2, "option": "y = x + 2", "isCorrect": false },
+          { "id": 3, "option": "y = x + 1", "isCorrect": false },
+          { "id": 4, "option": "y = 2x + 1", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "What is the solution to the quadratic equation x^2 + 4x + 4 = 0?",
+        "options": [
+          { "id": 1, "option": "(-2, -2)", "isCorrect": true },
+          { "id": 2, "option": "(2, 2)", "isCorrect": false },
+          { "id": 3, "option": "(-1, -1)", "isCorrect": false },
+          { "id": 4, "option": "(1, 1)", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "What is the sum of the interior angles in a hexagon?",
+        "options": [
+          { "id": 1, "option": "720 degrees", "isCorrect": true },
+          { "id": 2, "option": "360 degrees", "isCorrect": false },
+          { "id": 3, "option": "540 degrees", "isCorrect": false },
+          { "id": 4, "option": "180 degrees", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 6,
+        "question": "What is the value of x in the equation x/2 = 6?",
+        "options": [
+          { "id": 1, "option": "12", "isCorrect": true },
+          { "id": 2, "option": "6", "isCorrect": false },
+          { "id": 3, "option": "3", "isCorrect": false },
+          { "id": 4, "option": "24", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 7,
+        "question": "What is the equation of the circle with center (0,0) and radius 5?",
+        "options": [
+          { "id": 1, "option": "(x-0)^2 + (y-0)^2 = 5^2", "isCorrect": true },
+          { "id": 2, "option": "(x+0)^2 + (y+0)^2 = 5^2", "isCorrect": false },
+          { "id": 3, "option": "(x-5)^2 + (y-5)^2 = 5^2", "isCorrect": false },
+          { "id": 4, "option": "(x+5)^2 + (y+5)^2 = 5^2", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 8,
+        "question": "What is the value of x in the equation log base 2 of x = 3?",
+        "options": [
+          { "id": 1, "option": "8", "isCorrect": true },
+          { "id": 2, "option": "4", "isCorrect": false },
+          { "id": 3, "option": "16", "isCorrect": false },
+          { "id": 4, "option": "64", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 9,
+        "question": "What is the value of x in the equation sin(x) = 1/2?",
+        "options": [
+          { "id": 1, "option": "30 degrees", "isCorrect": true },
+          { "id": 2, "option": "45 degrees", "isCorrect": false },
+          { "id": 3, "option": "60 degrees", "isCorrect": false },
+          { "id": 4, "option": "90 degrees", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 10,
+        "question": "What is the value of x in the equation |x - 4| = 2?",
+        "options": [
+          { "id": 1, "option": "2", "isCorrect": true },
+          { "id": 2, "option": "3", "isCorrect": false },
+          { "id": 3, "option": "6", "isCorrect": false },
+          { "id": 4, "option": "8", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+

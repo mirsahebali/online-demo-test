@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import Navbar from "./components/Navbar";
-import Subjects from "./components/Subjects";
-import Screen from "./components/Screen";
-
+import Test from "./components/Test";
+import Result from "./components/Result";
+import { useState } from "react";
 export default function Home() {
+const [start, setStart] = useState(false)
+const [end, setEnd] = useState(false)
+
   return (
     <>
       <Head>
@@ -17,8 +17,12 @@ export default function Home() {
       </Head>
       <main>
         <Navbar></Navbar>
-        <Subjects></Subjects>
-        <Screen></Screen>
+        <div className="main-screen">
+        {start ? <Test/>: <div className="w-full h-screen flex justify-center items-center">
+<button onClick={()=> setStart(true)}>Start</button>
+          </div>}
+         
+        </div>
       </main>
     </>
   );

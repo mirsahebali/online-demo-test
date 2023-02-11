@@ -2,133 +2,103 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the atomic number of Carbon?",
-      "options": ["6", "7", "8", "9"],
-      "answer": "6"
+      "question": "What is the chemical symbol for iron?",
+      "options": [
+        { "id": 1, "option": "Fe", "isCorrect": true },
+        { "id": 2, "option": "Ir", "isCorrect": false },
+        { "id": 3, "option": "Fo", "isCorrect": false },
+        { "id": 4, "option": "Fr", "isCorrect": false }
+      ]
     },
     {
       "id": 2,
-      "question": "What is the chemical symbol for Iron?",
-      "options": ["Fe", "Ir", "Fo", "I"],
-      "answer": "Fe"
+      "question": "What is the chemical formula for water?",
+      "options": [
+        { "id": 1, "option": "H20", "isCorrect": true },
+        { "id": 2, "option": "HO2", "isCorrect": false },
+        { "id": 3, "option": "H2O2", "isCorrect": false },
+        { "id": 4, "option": "O2H", "isCorrect": false }
+      ]
     },
     {
       "id": 3,
-      "question": "What type of bond is formed between two identical atoms?",
+      "question": "What is the chemical formula for carbon dioxide?",
       "options": [
-        "Ionic bond",
-        "Covalent bond",
-        "Hydrogen bond",
-        "Coordinate covalent bond"
-      ],
-      "answer": "Covalent bond"
+        { "id": 1, "option": "CO2", "isCorrect": true },
+        { "id": 2, "option": "C02", "isCorrect": false },
+        { "id": 3, "option": "OC2", "isCorrect": false },
+        { "id": 4, "option": "OCO", "isCorrect": false }
+      ]
     },
     {
       "id": 4,
-      "question": "What is the chemical formula for water?",
-      "options": ["H2O", "H2S", "CO2", "NH3"],
-      "answer": "H2O"
+      "question": "What is the chemical formula for salt?",
+      "options": [
+        { "id": 1, "option": "NaCl", "isCorrect": true },
+        { "id": 2, "option": "NaC", "isCorrect": false },
+        { "id": 3, "option": "NCa", "isCorrect": false },
+        { "id": 4, "option": "CaN", "isCorrect": false }
+      ]
     },
     {
       "id": 5,
-      "question": "What is the state of matter of a gas at room temperature and pressure?",
-      "options": ["Solid", "Liquid", "Gas", "Plasma"],
-      "answer": "Gas"
+      "question": "What is the chemical formula for glucose?",
+      "options": [
+        { "id": 1, "option": "C6H12O6", "isCorrect": true },
+        { "id": 2, "option": "C6O12H6", "isCorrect": false },
+        { "id": 3, "option": "H6C12O6", "isCorrect": false },
+        { "id": 4, "option": "O6H12C6", "isCorrect": false }
+      ]
     },
     {
       "id": 6,
-      "question": "What is the chemical symbol for Sodium?",
-      "options": ["Na", "Sn", "N", "S"],
-      "answer": "Na"
+      "question": "What is the chemical formula for sulfuric acid?",
+      "options": [
+        { "id": 1, "option": "H2SO4", "isCorrect": true },
+        { "id": 2, "option": "HSO4", "isCorrect": false },
+        { "id": 3, "option": "SO4H2", "isCorrect": false },
+        { "id": 4, "option": "HSO2", "isCorrect": false }
+      ]
     },
     {
       "id": 7,
-      "question": "What is the chemical formula for glucose?",
-      "options": ["C6H12O6", "C12H22O11", "CH2O", "C2H5OH"],
-      "answer": "C6H12O6"
+      "question": "What is the chemical formula for nitric acid?",
+      "options": [
+        { "id": 1, "option": "HNO3", "isCorrect": true },
+        { "id": 2, "option": "NO3H", "isCorrect": false },
+        { "id": 3, "option": "HON3", "isCorrect": false },
+        { "id": 4, "option": "N3OH", "isCorrect": false }
+      ]
     },
     {
       "id": 8,
-      "question": "What is the chemical symbol for Chlorine?",
-      "options": ["Cl", "C", "Cr", "L"],
-      "answer": "Cl"
+      "question": "What is the chemical formula for hydrochloric acid?",
+      "options": [
+        { "id": 1, "option": "HCl", "isCorrect": true },
+        { "id": 2, "option": "ClH", "isCorrect": false },
+        { "id": 3, "option": "HC2", "isCorrect": false },
+        { "id": 4, "option": "H2C", "isCorrect": false }
+      ]
     },
     {
       "id": 9,
-      "question": "What is the chemical formula for table salt?",
-      "options": ["NaCl", "KCl", "CaCl2", "MgCl2"],
-      "answer": "NaCl"
+      "question": "What is the chemical formula for magnesium oxide?",
+      "options": [
+        { "id": 1, "option": "MgO", "isCorrect": true },
+        { "id": 2, "option": "OgM", "isCorrect": false },
+        { "id": 3, "option": "GMo", "isCorrect": false },
+        { "id": 4, "option": "OGm", "isCorrect": false }
+      ]
     },
     {
       "id": 10,
-      "question": "What is the chemical formula for hydrogen peroxide?",
-      "options": ["H2O2", "H2SO4", "HNO3", "HCl"],
-      "answer": "H2O2"
-    },
-    {
-      "id": 11,
-      "question": "What is the chemical symbol for Calcium?",
-      "options": ["Ca", "C", "Cl", "Cu"],
-      "answer": "Ca"
-    },
-    {
-      "id": 12,
-      "question": "What is the chemical formula for Ammonia?",
-      "options": ["NH3", "N2O", "NO", "N2H4"],
-      "answer": "NH3"
-    },
-    {
-      "id": 13,
-      "question": "What type of bond is formed between a metal and a non-metal?",
+      "question": "What is the chemical formula for ammonia?",
       "options": [
-        "Ionic bond",
-        "Covalent bond",
-        "Hydrogen bond",
-        "Coordinate covalent bond"
-      ],
-      "answer": "Ionic bond"
-    },
-    {
-      "id": 14,
-      "question": "What is the chemical formula for sulfuric acid?",
-      "options": ["H2SO4", "HNO3", "HClO4", "H3PO4"],
-      "answer": "H2SO4"
-    },
-    {
-      "id": 15,
-      "question": "What is the chemical symbol for Gold?",
-      "options": ["Au", "Ag", "Al", "Ar"],
-      "answer": "Au"
-    },
-    {
-      "id": 16,
-      "question": "What is the chemical formula for Methane?",
-      "options": ["CH4", "C2H6", "C3H8", "C2H2"],
-      "answer": "CH4"
-    },
-    {
-      "id": 17,
-      "question": "What is the chemical formula for nitric acid?",
-      "options": ["HNO3", "H2SO4", "HClO4", "H3PO4"],
-      "answer": "HNO3"
-    },
-    {
-      "id": 18,
-      "question": "What is the chemical formula for Carbon dioxide?",
-      "options": ["CO2", "CO", "C2O3", "C2O4"],
-      "answer": "CO2"
-    },
-    {
-      "id": 19,
-      "question": "What is the chemical formula for Magnesium oxide?",
-      "options": ["MgO", "Mg2O", "Mg3O2", "MgO2"],
-      "answer": "MgO"
-    },
-    {
-      "id": 20,
-      "question": "What is the chemical formula for potassium hydroxide?",
-      "options": ["KOH", "NaOH", "Ca(OH)2", "Mg(OH)2"],
-      "answer": "KOH"
+        { "id": 1, "option": "NH3", "isCorrect": true },
+        { "id": 2, "option": "H3N", "isCorrect": false },
+        { "id": 3, "option": "N3H", "isCorrect": false },
+        { "id": 4, "option": "HN3", "isCorrect": false }
+      ]
     }
   ]
 }

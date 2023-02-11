@@ -1,84 +1,104 @@
 {
   "questions": [
     {
-      "question": "What is the formula for calculating force?",
-      "options": ["F = mv", "F = ma", "F = m/v", "F = v/t"],
-      "answer": "F = ma"
-    },
-    {
-      "question": "What is the formula for calculating work done?",
-      "options": ["W = mv", "W = ma", "W = Fd", "W = mgh"],
-      "answer": "W = Fd"
-    },
-    {
-      "question": "What is the formula for calculating power?",
-      "options": ["P = mv", "P = ma", "P = Fd", "P = W/t"],
-      "answer": "P = W/t"
-    },
-    {
-      "question": "What is the formula for calculating potential energy?",
-      "options": ["PE = mv", "PE = ma", "PE = Fd", "PE = mgh"],
-      "answer": "PE = mgh"
-    },
-    {
-      "question": "What is the formula for calculating kinetic energy?",
-      "options": ["KE = mv", "KE = ma", "KE = Fd", "KE = mgh"],
-      "answer": "KE = 1/2mv^2"
-    },
-    {
-      "question": "What is the formula for calculating velocity?",
-      "options": ["v = at", "v = s/t", "v = s/d", "v = a/t"],
-      "answer": "v = s/t"
-    },
-    {
-      "question": "What is the formula for calculating acceleration?",
-      "options": ["a = v/t", "a = s/t^2", "a = F/m", "a = m/t"],
-      "answer": "a = v/t"
-    },
-    {
-      "question": "What is the formula for calculating momentum?",
-      "options": ["p = mv", "p = ma", "p = Fd", "p = W/t"],
-      "answer": "p = mv"
-    },
-    {
-      "question": "What is the formula for calculating wavelength?",
-      "options": ["λ = v/f", "λ = f/v", "λ = s/t", "λ = a/t"],
-      "answer": "λ = v/f"
-    },
-    {
-      "question": "What is the formula for calculating frequency?",
-      "options": ["f = v/λ", "f = λ/v", "f = s/t", "f = a/t"],
-      "answer": "f = v/λ"
-    },
-    {
-      "question": "What is the equation for Newton's second law of motion?",
+      "id": 1,
+      "question": "What is the equation for calculating force?",
       "options": [
-        "F = m * a",
-        "F = frictional force",
-        "F = m * v2/r",
-        "F = 1/2 mv2"
-      ],
-      "answer": "F = m * a"
+        { "id": 1, "option": "F = m * a", "isCorrect": true},
+        { "id": 2, "option": "F = m / a", "isCorrect": false },
+        { "id": 3, "option": "F = a / m", "isCorrect": false },
+        { "id": 4, "option": "F = 1 / m * a", "isCorrect": false }
+      ]
     },
     {
-      "question": "What is the formula for centripetal force?",
-      "options": ["F = ma", "F = m * a", "F = mv2/r", "F = 1/2 mv2"],
-      "answer": "F = mv2/r"
+      "id": 2,
+      "question": "What is the unit of electrical current?",
+      "options": [
+        { "id": 1, "option": "Ohm" , "isCorrect": false},
+        { "id": 2, "option": "Watt", "isCorrect": false },
+        { "id": 3, "option": "Ampere", "isCorrect": true },
+        { "id": 4, "option": "Volt", "isCorrect": false }
+      ]
     },
     {
-      "question": "What is the equation for the work-energy theorem?",
-      "options": ["W = F * s", "W = Fnet * s", "W = ΔKE", "W = 1/2 mv2"],
-      "answer": "W = ΔKE"
+      "id": 3,
+      "question": "What is the formula for calculating power?",
+      "options": [
+        { "id": 1, "option": "P = V * I" , "isCorrect": true},
+        { "id": 2, "option": "P = I / V" , "isCorrect": false},
+        { "id": 3, "option": "P = V / I" , "isCorrect": false},
+        { "id": 4, "option": "P = I * V" , "isCorrect": false}
+      ]
     },
     {
-      "question": "What is the equation for the universal law of gravitation?",
-      "options": ["F = Gm1m2/r2", "F = Gm1m2r", "F = Gm2/r2", "F = 1/2 mv2"],
-      "answer": "F = Gm1m2/r2"
+      "id": 4,
+      "question": "What is the formula for calculating work done?",
+      "options": [
+        { "id": 1, "option": "W = m * g * h" , "isCorrect": false},
+        { "id": 2, "option": "W = F * d" , "isCorrect": true},
+        { "id": 3, "option": "W = m * v^2" , "isCorrect": false},
+        { "id": 4, "option": "W = F * h" , "isCorrect": false}
+      ]
     },
     {
-      "question": "What is the equation for the angular momentum of a particle?",
-      "options": ["L = mvr", "L = m2v2/r", "L = mvr/2", "L = Iω"],
-      "answer": "L = Iω"
+      "id": 5,
+      "question": "What is the formula for calculating speed?",
+      "options": [
+        { "id": 1, "option": "v = d / t" , "isCorrect": true},
+        { "id": 2, "option": "v = t / d" , "isCorrect": false},
+        { "id": 3, "option": "v = d * t" , "isCorrect": false},
+        { "id": 4, "option": "v = 1 / d * t" , "isCorrect": false}
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What is the formula for calculating acceleration?",
+      "options": [
+        { "id": 1, "option": "a = v / t" , "isCorrect": true},
+        { "id": 2, "option": "a = t / v" , "isCorrect": false},
+        { "id": 3, "option": "a = v * t" , "isCorrect": false},
+        { "id": 4, "option": "a = d / v * t" , "isCorrect": false}
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What is the formula for calculating potential energy?",
+      "options": [
+        { "id": 1, "option": "PE = m * g * h" , "isCorrect": true},
+        { "id": 2, "option": "PE = k * x^2" , "isCorrect": false},
+        { "id": 3, "option": "PE = m * v^2" , "isCorrect": false},
+        { "id": 4, "option": "PE = F * d" , "isCorrect": false}
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What is the formula for calculating kinetic energy?",
+      "options": [
+        { "id": 1, "option": "KE = m * g * h" , "isCorrect": false},
+        { "id": 2, "option": "KE = k * x^2" , "isCorrect": false},
+        { "id": 3, "option": "KE = m * v^2" , "isCorrect": true},
+        { "id": 4, "option": "KE = F * d" , "isCorrect": false}
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What is Ohm's law?",
+      "options": [
+        { "id": 1, "option": "V = IR" , "isCorrect": true},
+        { "id": 2, "option": "I = VR" , "isCorrect": false},
+        { "id": 3, "option": "R = IV" , "isCorrect": false},
+        { "id": 4, "option": "P = IV" , "isCorrect": false}
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What is the formula for calculating resistance?",
+      "options": [
+        { "id": 1, "option": "R = V / I", "isCorrect": true},
+        { "id": 2, "option": "R = I / V", "isCorrect": false},
+        { "id": 3, "option": "R = V * I", "isCorrect": false},
+        { "id": 4, "option": "R = 1 / V * I" ,"isCorrect": false}
+      ]
     }
   ]
 }
