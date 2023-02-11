@@ -76,7 +76,6 @@ export default function Screen({ score, state }) {
       setQNo(0);
     }
     setSelectId(id === selectId ? -1 : id);
-
   };
 
   function clearClicked() {
@@ -93,14 +92,14 @@ export default function Screen({ score, state }) {
     setQNo(id - 1);
   }
 
-
-
-
   return (
     <>
-      {end ? (<div className="absolute top-[50%] left-[50%] p-5 rounded bg-slate-500">
-        <Result marks={marks} />
-        <h1><Link href="https://cv-website-nine.vercel.app/"></Link></h1>
+      {end ? (
+        <div className="absolute top-[50%] left-[50%] p-5 rounded bg-slate-500">
+          <Result marks={marks} />
+          <h1>
+            <Link href="https://cv-website-nine.vercel.app/"></Link>
+          </h1>
         </div>
       ) : (
         <div className="flex justify-center place-items-center">
@@ -138,12 +137,17 @@ export default function Screen({ score, state }) {
                         {" "}
                         Click Next or this!{" "}
                       </p>{" "}
-
                     </div>
                   ) : (
                     ""
                   )}
-                  {(qNo === 9 && subNo === 2)? (<p className="bg-red-500" onClick={endTest}>Click on end  test or click here</p>): (" ")}
+                  {qNo === 9 && subNo === 2 ? (
+                    <p className="bg-red-500" onClick={endTest}>
+                      Click on end test or click here
+                    </p>
+                  ) : (
+                    " "
+                  )}
                 </div>{" "}
               </div>
               <div className={styles.options}>
@@ -183,11 +187,26 @@ export default function Screen({ score, state }) {
           </div>
           <>
             <Sidebar
-              element={<QuizTimer end={<Result marks={marks}></Result>}></QuizTimer>}
-              Array={jsonData[subNo].questions}
-              palateQ={handleId}
-              
-            >{console.log(jsonData[subNo].questions)}</Sidebar>
+              element={
+                <QuizTimer end={<Result marks={marks}></Result>}></QuizTimer>
+              }
+              Array={jsonData[subNo].questions.map((question) => {
+                return (
+                  <li
+                    className="m-2 text-lg border-4 cursor-pointer hover:bg-black hover:text-white hover:border-double hover:scale-110 p-1 hover:ease-in-out flex-wrap border-black "
+                    onClick={() => handleId(question.id)}
+                    key={question.id}
+
+                  >
+                    {" "}
+                    {question.id}
+                  </li>
+                );
+              })}
+             
+            >
+              {console.log(jsonData[subNo].questions)}
+            </Sidebar>
           </>
         </div>
       )}
