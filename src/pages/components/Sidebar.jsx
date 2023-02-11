@@ -1,11 +1,11 @@
 import profile from "./profiles.json";
 import Image from "next/image";
-export default function Sidebar({style, element, array, palateQ}) {
+export default function Sidebar({element, array, palateQ}) {
   return (
 
     <div className="flex flex-col items-center justify-center " >
-      <div className="profile bg-sky-300 w-max rounded">
-        <div>
+      <div className="profile bg-sky-300 w-max rounded p-3">
+        <div >
           <Image
             src={profile.img}
             alt="student_img"

@@ -7,7 +7,7 @@ import SubBtn from "./SubBtn";
 import Result from "./Result";
 import Sidebar from "./Sidebar";
 import QuizTimer from "./QuizTimer";
-import { redirect } from "next/dist/server/api-utils";
+import Link from "next/link";
 export default function Screen({ score, state }) {
   const jsonData = [phyData, chemData, mathsData];
   const [marks, setMarks] = useState(0);
@@ -75,9 +75,8 @@ export default function Screen({ score, state }) {
       setSub(jsonData[0]);
       setQNo(0);
     }
-  };
-  const handleColorChange = (id) => {
     setSelectId(id === selectId ? -1 : id);
+
   };
 
   function clearClicked() {
@@ -100,8 +99,10 @@ export default function Screen({ score, state }) {
 
   return (
     <>
-      {end ? (
+      {end ? (<div className="absolute top-[50%] left-[50%] p-5 rounded bg-slate-500">
         <Result marks={marks} />
+        <h1><Link href="https://cv-website-nine.vercel.app/"></Link></h1>
+        </div>
       ) : (
         <div className="flex justify-center place-items-center">
           <div className={styles.screen}>
@@ -154,7 +155,6 @@ export default function Screen({ score, state }) {
                         className="relative top-[4rem] flex flex-col justify-center items-center border border-black p-7 bg-yellow-400 center rounded hover:bg-blue-700 hover:scale-110"
                         onClick={() => {
                           optionClicked(option.isCorrect);
-                          handleColorChange(option.id);
                         }}
                         style={{
                           backgroundColor:
@@ -184,7 +184,7 @@ export default function Screen({ score, state }) {
           </div>
           <>
             <Sidebar
-              element={<QuizTimer msg={"Times's Up"}></QuizTimer>}
+              element={<QuizTimer end={<Result marks={marks}></Result>}></QuizTimer>}
               array={jsonData[subNo].questions}
               palateQ={handleId}
             ></Sidebar>

@@ -13,12 +13,14 @@ export default function QuizTimer(props) {
     }
     return () => clearInterval(timerId);
   }, [timeLeft]);
-
+function loging() {
+  console.log("Test ended")
+}
  
   let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;
 
   return (
-    <div>{timeLeft ? <p>{`${minutes}: ${seconds === 0? "00": seconds}`}</p> : props.msg}</div>
+    <div>{timeLeft ? <p>{`${minutes}: ${seconds === 0? "00": seconds}`}</p> : props.end}</div>
   );
 }
