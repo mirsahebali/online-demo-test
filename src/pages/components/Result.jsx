@@ -1,6 +1,6 @@
-function Result() {
+function Result(props) {
           return ( <div>
-                    Result
+                    <h1 className="text-2xl ">You scored : {props.marks}</h1>
           </div> );
 }
 

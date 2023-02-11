@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { redirect } from "react-router-dom";
 
 export default function QuizTimer(props) {
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(1800);
   const [redirect, setRedirect] = useState(false)
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -19,6 +19,6 @@ export default function QuizTimer(props) {
   let seconds = timeLeft % 60;
 
   return (
-    <div>{timeLeft ? <p>{`${minutes}: ${seconds}`}</p> : props.msg}</div>
+    <div>{timeLeft ? <p>{`${minutes}: ${seconds === 0? "00": seconds}`}</p> : props.msg}</div>
   );
 }

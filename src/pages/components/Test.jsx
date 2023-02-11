@@ -1,15 +1,17 @@
-import Sidebar from "./Sidebar";
 import Screen from "./Screen";
-import QuizTimer from "./QuizTimer";
+import { useState } from "react";
 
 function Test() {
-          return ( <div className="flex justify-center items-center">
-                       <div>
-            
-            <Screen></Screen>
-          </div>
-            <Sidebar element={ <QuizTimer msg={ "Times's Up" }></QuizTimer>}></Sidebar>
-          </div> );
+  const [end, setEnd] = useState(false);
+  return (
+    <div className="flex justify-center items-center">
+      <div>
+        <Screen></Screen>
+      </div>
+     
+      {console.log(Screen.score)}
+    </div>
+  );
 }
 
 export default Test;
