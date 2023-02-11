@@ -1,17 +1,17 @@
 import profile from "./profiles.json";
 import Image from "next/image";
-export default function Sidebar({style, element}) {
+export default function Sidebar({style, element, array, palateQ}) {
   return (
 
-    <div className="flex flex-col items-start justify-center left-3" >
-      <div className="profile bg-sky-300">
+    <div className="flex flex-col items-center justify-center " >
+      <div className="profile bg-sky-300 w-max rounded">
         <div>
           <Image
             src={profile.img}
             alt="student_img"
             width={100}
             height={100}
-            style={{ borderRadius: "10rem" }}
+            style={{ borderRadius: "100rem" }}
           ></Image>
         </div>
         <div> Name: {profile.name}</div>
@@ -19,8 +19,8 @@ export default function Sidebar({style, element}) {
         {element}
         </div>
       <div className="q_pallate border border-black">
-<ul className="flex">
- {}
+<ul className="flex flex-wrap bg-blue-300">
+ {array.map((question)=> {return <li className="m-2 text-lg border-4 cursor-pointer hover:bg-black hover:text-white hover:border-double hover:scale-110 p-1 hover:ease-in-out flex-wrap border-black " onClick={()=> palateQ(question.id)} key={question.id}> {question.id}</li>})}
  </ul>
       </div>
       <div className="legend"></div>

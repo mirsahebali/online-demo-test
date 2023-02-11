@@ -14,7 +14,7 @@ export default function Screen({ score, state }) {
   const [qNo, setQNo] = useState(0);
   const [subNo, setSubNo] = useState(0);
   const [sub, setSub] = useState(jsonData[0]);
-  const [selectId, setSelectId] = useState(null);
+  const [selectId, setSelectId] = useState(-1);
   const [end, setEnd] = useState(false);
   function increaseQNo() {
     setQNo(qNo + 1);
@@ -59,7 +59,7 @@ export default function Screen({ score, state }) {
     setSub(jsonData[subNo]);
   }
 
-  const optionClicked = (isCorrect) => {
+  const optionClicked = (isCorrect, id) => {
     if (isCorrect) {
       setMarks(marks + 1);
     }
@@ -76,16 +76,28 @@ export default function Screen({ score, state }) {
       setQNo(0);
     }
   };
+  const handleColorChange = (id) => {
+    setSelectId(id === selectId ? -1 : id);
+  };
+
   function clearClicked() {
-    optionClicked(null);
+    optionClicked(null, null);
   }
 
   function endTest() {
     setEnd(true);
   }
-function setQ(n){
-setQNo(n);
-}
+  function setQ(n) {
+    setQNo(n);
+  }
+  function handleId(id) {
+    setQNo(id - 1);
+  }
+
+
+
+  console.log(jsonData[subNo]);
+
   return (
     <>
       {end ? (
@@ -112,24 +124,26 @@ setQNo(n);
             <div className={styles.q_container}>
               <div className={styles.question}>
                 <div>
-                  <h2>Question: </h2>
-                  <h1 className="text-3xl font-bold">
+                  <h2 className="text-white">Question: </h2>
+                  <h1 className="text-3xl font-bold text-cyan-200">
                     {jsonData[subNo].questions[qNo].question}
                   </h1>
 
                   {qNo === 9 ? (
                     <div className="flex justify-end items-center">
                       <p
-                        className="p-3 border flex justify-center w-min bg-black hover:bg-pink-300 text-purple-900"
+                        className="p-3 border flex justify-center w-11 bg-black hover:bg-pink-300 text-purple-900"
                         onClick={increaseSubNo}
                       >
                         {" "}
-                        Click Next!{" "}
+                        Click Next or this!{" "}
                       </p>{" "}
+
                     </div>
                   ) : (
                     ""
                   )}
+                  {(qNo === 9 && subNo === 2)? (<p className="bg-red-500" onClick={endTest}>Click on end  test or click here</p>): (" ")}
                 </div>{" "}
               </div>
               <div className={styles.options}>
@@ -138,7 +152,14 @@ setQNo(n);
                     return (
                       <li
                         className="relative top-[4rem] flex flex-col justify-center items-center border border-black p-7 bg-yellow-400 center rounded hover:bg-blue-700 hover:scale-110"
-                        onClick={() => optionClicked(option.isCorrect)}
+                        onClick={() => {
+                          optionClicked(option.isCorrect);
+                          handleColorChange(option.id);
+                        }}
+                        style={{
+                          backgroundColor:
+                            option.id === selectId ? "lightblue" : "",
+                        }}
                         key={option.id}
                       >
                         {option.option}
@@ -164,6 +185,8 @@ setQNo(n);
           <>
             <Sidebar
               element={<QuizTimer msg={"Times's Up"}></QuizTimer>}
+              array={jsonData[subNo].questions}
+              palateQ={handleId}
             ></Sidebar>
           </>
         </div>
