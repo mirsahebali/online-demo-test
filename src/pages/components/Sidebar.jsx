@@ -1,6 +1,6 @@
 import profile from "./profiles.json";
 import Image from "next/image";
-export default function Sidebar({element, array, palateQ}) {
+export default function Sidebar({element, Array, palateQ}) {
   return (
 
     <div className="flex flex-col items-center justify-center " >
@@ -20,7 +20,7 @@ export default function Sidebar({element, array, palateQ}) {
         </div>
       <div className="q_pallate border border-black">
 <ul className="flex flex-wrap bg-blue-300">
- {array.map((question)=> {return <li className="m-2 text-lg border-4 cursor-pointer hover:bg-black hover:text-white hover:border-double hover:scale-110 p-1 hover:ease-in-out flex-wrap border-black " onClick={()=> palateQ(question.id)} key={question.id}> {question.id}</li>})}
+ {Array.questions.map((question)=> {return <li className="m-2 text-lg border-4 cursor-pointer hover:bg-black hover:text-white hover:border-double hover:scale-110 p-1 hover:ease-in-out flex-wrap border-black " onClick={()=> palateQ(question.id)} key={question.id}> {question.id}</li>})}
  </ul>
       </div>
       <div className="legend"></div>

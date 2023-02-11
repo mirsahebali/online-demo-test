@@ -185,8 +185,9 @@ export default function Screen({ score, state }) {
           <>
             <Sidebar
               element={<QuizTimer end={<Result marks={marks}></Result>}></QuizTimer>}
-              array={jsonData[subNo].questions}
+              Array={jsonData[subNo]}
               palateQ={handleId}
+              
             ></Sidebar>
           </>
         </div>
