@@ -11,39 +11,43 @@ import Link from "next/link";
 export default function Screen({ score, state }) {
   const jsonData = [phyData, chemData, mathsData];
   const [marks, setMarks] = useState(0);
-  const [qNo, setQNo] = useState(0);
+  const [qId, setQId] = useState(0);
   const [subNo, setSubNo] = useState(0);
   const [sub, setSub] = useState(jsonData[0]);
-  const [selectId, setSelectId] = useState(-1);
   const [end, setEnd] = useState(false);
-  function increaseQNo() {
-    setQNo(qNo + 1);
-    if (qNo > 8) {
-      setQNo(0);
+  const [answered, setAnswered] = useState(0);
+
+  //increases and decreases question number
+  function increaseQId() {
+    setQId(qId + 1);
+    if (qId > 8) {
+      setQId(0);
     }
   }
 
-  function decreaseQNo() {
-    setQNo(qNo - 1);
-    if (qNo <= 0) {
-      setQNo(9);
+  function decreaseQId() {
+    setQId(qId - 1);
+    if (qId <= 0) {
+      setQId(9);
     }
   }
+
+  //increases and decreases subject no. here phy = 1, chem = 2, maths = 3
   function increaseSubNo() {
     if (subNo === 0) {
       setSubNo(1);
       setSub(jsonData[subNo]);
-      setQNo(0);
+      setQId(0);
     }
     if (subNo === 1) {
       setSubNo(2);
       setSub(jsonData[subNo]);
-      setQNo(0);
+      setQId(0);
     }
     if (subNo === 2) {
       setSubNo(0);
       setSub(jsonData[subNo]);
-      setQNo(0);
+      setQId(0);
     }
   }
   function setPhy() {
@@ -59,44 +63,50 @@ export default function Screen({ score, state }) {
     setSub(jsonData[subNo]);
   }
 
+  //checks for answer is correct or not in backend.
+
   const optionClicked = (isCorrect, id) => {
     if (isCorrect) {
       setMarks(marks + 1);
     }
-    if (qNo < 9) {
-      setQNo(qNo + 1);
-    } else if (subNo === 0 && qNo > 8) {
+    if (qId < 9) {
+      setQId(qId + 1);
+    } else if (subNo === 0 && qId > 8) {
       setSub(jsonData[1]);
-      setQNo(0);
-    } else if (subNo === 1 && qNo > 9) {
+      setQId(0);
+    } else if (subNo === 1 && qId > 9) {
       setSub(jsonData[2]);
-      setQNo(0);
-    } else if (subNo === 2 && qNo > 9) {
+      setQId(0);
+    } else if (subNo === 2 && qId > 9) {
       setSub(jsonData[0]);
-      setQNo(0);
+      setQId(0);
     }
-    setSelectId(id === selectId ? -1 : id);
+    setAnswered(answered + 1);
+    console.log(id);
   };
 
   function clearClicked() {
     optionClicked(null, null);
+    if (!answered) {
+      setAnswered(answered - 1);
+    }
   }
 
   function endTest() {
     setEnd(true);
   }
   function setQ(n) {
-    setQNo(n);
+    setQId(n);
   }
   function handleId(id) {
-    setQNo(id - 1);
+    setQId(id - 1);
   }
 
   return (
     <>
       {end ? (
         <div className="absolute top-[50%] left-[50%] p-5 rounded bg-slate-500">
-          <Result marks={marks} />
+          <Result marks={marks} answered={answered}/>
           <h1>
             <Link href="https://cv-website-nine.vercel.app/"></Link>
           </h1>
@@ -118,17 +128,17 @@ export default function Screen({ score, state }) {
               </div>
             </div>
             <div className={styles.q_no}>
-              <h2>Ques No. {qNo + 1}</h2>
+              <h2>Ques No. {qId + 1}</h2>
             </div>
             <div className={styles.q_container}>
               <div className={styles.question}>
                 <div>
                   <h2 className="text-white">Question: </h2>
                   <h1 className="text-3xl font-bold text-cyan-200">
-                    {jsonData[subNo].questions[qNo].question}
+                    {jsonData[subNo].questions[qId].question}
                   </h1>
 
-                  {qNo === 9 ? (
+                  {qId === 9 ? (
                     <div className="flex justify-end items-center">
                       <p
                         className="p-3 border flex justify-center w-11 bg-black hover:bg-pink-300 text-purple-900"
@@ -141,7 +151,7 @@ export default function Screen({ score, state }) {
                   ) : (
                     ""
                   )}
-                  {qNo === 9 && subNo === 2 ? (
+                  {qId === 9 && subNo === 2 ? (
                     <p className="bg-red-500" onClick={endTest}>
                       Click on end test or click here
                     </p>
@@ -152,17 +162,17 @@ export default function Screen({ score, state }) {
               </div>
               <div className={styles.options}>
                 <ul className="flex flex-col">
-                  {jsonData[subNo].questions[qNo].options.map((option) => {
+                  {jsonData[subNo].questions[qId].options.map((option) => {
                     return (
                       <li
                         className="relative top-[4rem] flex flex-col justify-center items-center border border-black p-7 bg-yellow-400 center rounded hover:bg-blue-700 hover:scale-110"
                         onClick={() => {
-                          optionClicked(option.isCorrect);
+                          optionClicked(option.isCorrect, option.id);
                         }}
-                        style={{
-                          backgroundColor:
-                            option.id === selectId ? "lightblue" : "",
-                        }}
+                        // style={{
+                        //   backgroundColor:
+                        //     option.id === selectId ? "lightblue" : "",
+                        // }}
                         key={option.id}
                       >
                         {option.option}
@@ -177,10 +187,10 @@ export default function Screen({ score, state }) {
                 CLEAR RESPONSE
               </button>
               <button className={styles.button}>REVIEW</button>
-              <button className={styles.button} onClick={decreaseQNo}>
+              <button className={styles.button} onClick={decreaseQId}>
                 PREVIOUS
               </button>
-              <button className={styles.button} onClick={increaseQNo}>
+              <button className={styles.button} onClick={increaseQId}>
                 NEXT
               </button>
             </div>
@@ -196,14 +206,12 @@ export default function Screen({ score, state }) {
                     className="m-2 text-lg border-4 cursor-pointer hover:bg-black hover:text-white hover:border-double hover:scale-110 p-1 hover:ease-in-out flex-wrap border-black "
                     onClick={() => handleId(question.id)}
                     key={question.id}
-
                   >
                     {" "}
                     {question.id}
                   </li>
                 );
               })}
-             
             >
               {console.log(jsonData[subNo].questions)}
             </Sidebar>
